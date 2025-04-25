@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-
+	//este es un cambio realizado desde el repositorio local.
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
