@@ -3,33 +3,37 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        
         Scanner scanner = new Scanner(System.in);
+        Temperatura te = new Temperatura();
+        Peso pe = new Peso();
+        Distancia di = new Distancia();
         
         System.out.println("Elige una opción:");
-        System.out.println("1. Convertir metros a kilómetros");
-        System.out.println("2. Convertir gramos a kilogramos");
-        System.out.println("3. Convertir libras a kilogramos");
+        System.out.println("1. Convertir kilómetros a millas");
+        System.out.println("2. Convertir kilogramos a libras");
+        System.out.println("3. Convertir Celsius a Fahrenheit");
         
         int opcion = scanner.nextInt();
 
         switch (opcion) {
             case 1:
-                System.out.print("Introduce la cantidad en metros: ");
-                double metros = scanner.nextDouble();
-                double kilometros = ConversorDistancia.convertirMetrosAKilometros(metros);
-                System.out.println(metros + " metros son " + kilometros + " kilómetros.");
+                System.out.print("Introduce la cantidad en kilómetros: ");
+                double kilometros = scanner.nextDouble();
+                double millas = di.kilometrosAMillas(kilometros);
+                System.out.println(kilometros + " kilometros son " + millas + " millas.");
                 break;
             case 2:
-                System.out.print("Introduce la cantidad en gramos: ");
-                double gramos = scanner.nextDouble();
-                double kilogramos = ConversorPeso.convertirGramosAKilogramos(gramos);
-                System.out.println(gramos + " gramos son " + kilogramos + " kilogramos.");
+                System.out.print("Introduce la cantidad en kilogramos: ");
+                double kilogramos = scanner.nextDouble();
+                double libras = pe.kilogramosALibras(kilogramos);
+                System.out.println(kilogramos + " kilogramos son " + libras + " libras.");
                 break;
             case 3:
-                System.out.print("Introduce la cantidad en libras: ");
-                double libras = scanner.nextDouble();
-                double kilogramosLibras = ConversorPeso.convertirLibrasAKilogramos(libras);
-                System.out.println(libras + " libras son " + kilogramosLibras + " kilogramos.");
+                System.out.print("Introduce la cantidad en Celsius: ");
+                double Celsius = scanner.nextDouble();
+                double Fahrentheit = te.celsiusAFahrenheit(Celsius);
+                System.out.println(Celsius + "ºC son " + Fahrentheit + "ºF");
                 break;
             default:
                 System.out.println("Opción no válida.");
