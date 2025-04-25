@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
 	//este es un cambio realizado desde el repositorio local.
+	//este es un cambio hecho desde la nueva rama.
     public static void main(String[] args) {
         
         Scanner scanner = new Scanner(System.in);
